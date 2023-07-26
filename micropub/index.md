@@ -9,3 +9,7 @@ form.
 
 Usually secured with [IndieAuth](/indieauth/). Sometimes paired with [Microsub](/microsub/).
 
+## Get
+
+- [Config](config)
+- [Syndication config](syndicate-to)
