@@ -15,4 +15,4 @@ Usually used in conjunction with [Webfinger](/webfinger)
 ## Actions
 
 - Follow
-- Delete
+- [Delete](delete)

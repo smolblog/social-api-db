@@ -2,8 +2,6 @@
 title: ActivityPub - Actor
 ---
 
-# ActivityPub: Actor
-
 ## Example
 
 ### Request
