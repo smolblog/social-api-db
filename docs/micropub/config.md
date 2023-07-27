@@ -1,20 +1,20 @@
 ---
-title: Micropub - Config
+title: Config
 ---
+
+# Config
 
 This informs the Micropub client what capabilities the server has for the authenticated user.
 
-## Example
+## Request
 
-### Request
-
-```
+```http
 GET /micropub?q=config HTTP/1.1
 Authorization: Bearer 1234567890asdfghjkl
 Host: micro.blog
 ```
 
-### Response
+## Response
 
 ```json
 {

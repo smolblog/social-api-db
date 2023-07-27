@@ -1,15 +1,11 @@
----
-title: ActivityPub - Delete
----
+# Delete
 
 Used to delete something. It could be a previous request, it could be a user.
 
 Fun fact: when a Mastodon server knows that you exist, you may start getting account deletion requests for accounts
 deleted from that server.
 
-## Example
-
-### Request
+## Request
 
 **POST** to a server's inbox:
 
