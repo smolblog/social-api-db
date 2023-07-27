@@ -12,27 +12,93 @@ GET /wp-json/smolblog/v2/site/426a9e54-435f-4135-9252-0d0a6ddd1dba/activitypub/a
 
 ## Response Variants
 
-### Smolblog (WIP)
+### [Mastodon](../implementations/mastodon.md)
+
+The **GET** request must be sent with a header of `Accept: application/json` in order to get the response; any other
+header will redirect to the HTML profile of the user.
 
 ```json
 {
-	"type": "Person",
-	"streams":[],
-	"id": "https:\/\/smol.blog\/wp-json\/smolblog\/v2\/site\/426a9e54-435f-4135-9252-0d0a6ddd1dba\/activitypub\/actor",
-	"inbox": "https:\/\/smol.blog\/wp-json\/smolblog\/v2\/site\/426a9e54-435f-4135-9252-0d0a6ddd1dba\/activitypub\/inbox",
-	"outbox": "https:\/\/smol.blog\/wp-json\/smolblog\/v2\/site\/426a9e54-435f-4135-9252-0d0a6ddd1dba\/activitypub\/outbox",
-	"preferredUsername": "oddevan",
-	"url": "http:\/\/oddevan.smol.blog",
-	"name": "Evan Hildreth",
-	"endpoints": {
-		"sharedInbox": "https:\/\/smol.blog\/wp-json\/smolblog\/v2\/activitypub\/inbox"
-	},
-	"publicKey": {
-		"id": "https:\/\/smol.blog\/wp-json\/smolblog\/v2\/site\/426a9e54-435f-4135-9252-0d0a6ddd1dba\/activitypub\/actor#publicKey",
-		"owner": "https:\/\/smol.blog\/wp-json\/smolblog\/v2\/site\/426a9e54-435f-4135-9252-0d0a6ddd1dba\/activitypub\/actor",
-		"publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyKBsUQR9J+JRQd7pFXO3\nATrJIYcEp309IWapF3Oe\/aEklSenWMZVrLa14jub12WY6SYl981XN4PN0tqTTlSV\naAZDUWDQd1XdGiPHKo37Yo8Qijc7QOu3tWM082ZXC0PKSlfsG\/mLK5bPIY97BUE9\nkk5J93RVTz7mj7Gw\/bnEqB5xiUHxrsqQhblyowuRIj1jVr0iyU0aUzxmEaTDlZ6j\nfsaeEc3FpuvLEJP+fdCTh3gXSg+JvqQ\/fHb+aYbRLqKuuJQ7l7+yxJvLdYuMHkp1\nKBDgoOIeOxoSeFj3i3Bceb2U7QSkolY5RCOo3fTq+GhJXQua2KeL7B5kSefofYyQ\nwQIDAQAB\n-----END PUBLIC KEY-----"
-	}
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1",
+    {
+      "manuallyApprovesFollowers": "as:manuallyApprovesFollowers",
+      "toot": "http://joinmastodon.org/ns#",
+      "featured": { "@id": "toot:featured", "@type": "@id" },
+      "featuredTags": { "@id": "toot:featuredTags", "@type": "@id" },
+      "alsoKnownAs": { "@id": "as:alsoKnownAs", "@type": "@id" },
+      "movedTo": { "@id": "as:movedTo", "@type": "@id" },
+      "schema": "http://schema.org#",
+      "PropertyValue": "schema:PropertyValue",
+      "value": "schema:value",
+      "discoverable": "toot:discoverable",
+      "Device": "toot:Device",
+      "Ed25519Signature": "toot:Ed25519Signature",
+      "Ed25519Key": "toot:Ed25519Key",
+      "Curve25519Key": "toot:Curve25519Key",
+      "EncryptedMessage": "toot:EncryptedMessage",
+      "publicKeyBase64": "toot:publicKeyBase64",
+      "deviceId": "toot:deviceId",
+      "claim": { "@type": "@id", "@id": "toot:claim" },
+      "fingerprintKey": { "@type": "@id", "@id": "toot:fingerprintKey" },
+      "identityKey": { "@type": "@id", "@id": "toot:identityKey" },
+      "devices": { "@type": "@id", "@id": "toot:devices" },
+      "messageFranking": "toot:messageFranking",
+      "messageType": "toot:messageType",
+      "cipherText": "toot:cipherText",
+      "suspended": "toot:suspended",
+      "focalPoint": { "@container": "@list", "@id": "toot:focalPoint" }
+    }
+  ],
+  "id": "https://mastodon.social/users/oddevan",
+  "type": "Person",
+  "following": "https://mastodon.social/users/oddevan/following",
+  "followers": "https://mastodon.social/users/oddevan/followers",
+  "inbox": "https://mastodon.social/users/oddevan/inbox",
+  "outbox": "https://mastodon.social/users/oddevan/outbox",
+  "featured": "https://mastodon.social/users/oddevan/collections/featured",
+  "featuredTags": "https://mastodon.social/users/oddevan/collections/tags",
+  "preferredUsername": "oddevan",
+  "name": "Evan Hildreth",
+  "summary": "\u003cp\u003eHow long should it take somebody\u2028 / Before he can be someone?\u003c/p\u003e",
+  "url": "https://mastodon.social/@oddevan",
+  "manuallyApprovesFollowers": false,
+  "discoverable": true,
+  "published": "2017-11-13T00:00:00Z",
+  "devices": "https://mastodon.social/users/oddevan/collections/devices",
+  "publicKey": {
+    "id": "https://mastodon.social/users/oddevan#main-key",
+    "owner": "https://mastodon.social/users/oddevan",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoDim3Qywy7PQv6YmBxfO\nDCJAasbmCowLQznpaLubJbWCHePer05HMeFYTarPML8lJ+gYoMg9trUzFHBdKbga\nOODwMQyFhN1gjuOnVmF9e92lZhtq+L+6D9Uyg2yzzkqgbfKP0tLchUx/nAC0PA3T\nMTM2pvz3HQH7KTZ37QHTCzEfJcbSRP4YfXUxQiGuDGADGjgRQXzOfYh76uDYpGrn\nGnrjhZvE0S9i1c/7co+1U0GUjeF3o707TfjoGHCeocHtNrOPvNorCrWHjwQJbLaz\nmSDnVvGTsQ/W2jM8i6bMgkdH9UYuCVR8gmIJfpFP70aDbH3NrdLLJpi2AMCggsCx\nhQIDAQAB\n-----END PUBLIC KEY-----\n"
+  },
+  "tag": [],
+  "attachment": [
+    { "type": "PropertyValue", "name": "Pronouns", "value": "He/him/his" },
+    {
+      "type": "PropertyValue",
+      "name": "Cross-posted from",
+      "value": "\u003cspan class=\"h-card\" translate=\"no\"\u003e\u003ca href=\"https://micro.blog/activitypub/oddevan\" class=\"u-url mention\"\u003e@\u003cspan\u003eoddevan@micro.blog\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "Website",
+      "value": "\u003ca href=\"https://eph.me/\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan class=\"\"\u003eeph.me/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e"
+    }
+  ],
+  "endpoints": { "sharedInbox": "https://mastodon.social/inbox" },
+  "icon": {
+    "type": "Image",
+    "mediaType": "image/png",
+    "url": "https://files.mastodon.social/accounts/avatars/000/238/202/original/b067f50fd338a482.png"
+  },
+  "image": {
+    "type": "Image",
+    "mediaType": "image/jpeg",
+    "url": "https://files.mastodon.social/accounts/headers/000/238/202/original/e93ad6bcc8ef808a.jpg"
+  }
 }
+
 ```
 
 ### [Micro.blog](../implementations/microblog.md)
