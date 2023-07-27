@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://socialapi.smolblog.org/activitypub/actor/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Actor - Social API Database</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Actor";
+        var mkdocs_page_input_path = "activitypub/actor.md";
+        var mkdocs_page_url = "/activitypub/actor/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Social API Database
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Activitypub</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">About ActivityPub</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Actor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#request">Request</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#response">Response</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#response-variants">Response Variants</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#mastodon">Mastodon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#microblog">Micro.blog</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete/">Delete</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Implementations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../implementations/">Implementations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../implementations/mastodon/">Mastodon</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../implementations/microblog/">Micro.blog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Indieauth</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../indieauth/">About IndieAuth</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Micropub</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../micropub/">About Micropub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../micropub/config/">Config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../micropub/syndicate-to/">Syndication Config</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microsub</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microsub/">About Microsub</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Webfinger</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../webfinger/">About Webfinger</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Social API Database</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Activitypub &raquo;</li>
+      <li class="breadcrumb-item active">Actor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="actor">Actor<a class="headerlink" href="#actor" title="Permanent link">#</a></h2>
+<h3 id="request">Request<a class="headerlink" href="#request" title="Permanent link">#</a></h3>
+<p>An empty <strong>GET</strong> request to the server's endpoint for this particular actor.</p>
+<pre><code>GET /wp-json/smolblog/v2/site/426a9e54-435f-4135-9252-0d0a6ddd1dba/activitypub/actor
+</code></pre>
+<h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">#</a></h3>
+<h3 id="response-variants">Response Variants<a class="headerlink" href="#response-variants" title="Permanent link">#</a></h3>
+<h4 id="mastodon"><a href="../../implementations/mastodon/">Mastodon</a><a class="headerlink" href="#mastodon" title="Permanent link">#</a></h4>
+<p>The <strong>GET</strong> request must be sent with a header of <code>Accept: application/json</code> in order to get the response; any other
+header will redirect to the HTML profile of the user.</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: [
+    &quot;https://www.w3.org/ns/activitystreams&quot;,
+    &quot;https://w3id.org/security/v1&quot;,
+    {
+      &quot;manuallyApprovesFollowers&quot;: &quot;as:manuallyApprovesFollowers&quot;,
+      &quot;toot&quot;: &quot;http://joinmastodon.org/ns#&quot;,
+      &quot;featured&quot;: { &quot;@id&quot;: &quot;toot:featured&quot;, &quot;@type&quot;: &quot;@id&quot; },
+      &quot;featuredTags&quot;: { &quot;@id&quot;: &quot;toot:featuredTags&quot;, &quot;@type&quot;: &quot;@id&quot; },
+      &quot;alsoKnownAs&quot;: { &quot;@id&quot;: &quot;as:alsoKnownAs&quot;, &quot;@type&quot;: &quot;@id&quot; },
+      &quot;movedTo&quot;: { &quot;@id&quot;: &quot;as:movedTo&quot;, &quot;@type&quot;: &quot;@id&quot; },
+      &quot;schema&quot;: &quot;http://schema.org#&quot;,
+      &quot;PropertyValue&quot;: &quot;schema:PropertyValue&quot;,
+      &quot;value&quot;: &quot;schema:value&quot;,
+      &quot;discoverable&quot;: &quot;toot:discoverable&quot;,
+      &quot;Device&quot;: &quot;toot:Device&quot;,
+      &quot;Ed25519Signature&quot;: &quot;toot:Ed25519Signature&quot;,
+      &quot;Ed25519Key&quot;: &quot;toot:Ed25519Key&quot;,
+      &quot;Curve25519Key&quot;: &quot;toot:Curve25519Key&quot;,
+      &quot;EncryptedMessage&quot;: &quot;toot:EncryptedMessage&quot;,
+      &quot;publicKeyBase64&quot;: &quot;toot:publicKeyBase64&quot;,
+      &quot;deviceId&quot;: &quot;toot:deviceId&quot;,
+      &quot;claim&quot;: { &quot;@type&quot;: &quot;@id&quot;, &quot;@id&quot;: &quot;toot:claim&quot; },
+      &quot;fingerprintKey&quot;: { &quot;@type&quot;: &quot;@id&quot;, &quot;@id&quot;: &quot;toot:fingerprintKey&quot; },
+      &quot;identityKey&quot;: { &quot;@type&quot;: &quot;@id&quot;, &quot;@id&quot;: &quot;toot:identityKey&quot; },
+      &quot;devices&quot;: { &quot;@type&quot;: &quot;@id&quot;, &quot;@id&quot;: &quot;toot:devices&quot; },
+      &quot;messageFranking&quot;: &quot;toot:messageFranking&quot;,
+      &quot;messageType&quot;: &quot;toot:messageType&quot;,
+      &quot;cipherText&quot;: &quot;toot:cipherText&quot;,
+      &quot;suspended&quot;: &quot;toot:suspended&quot;,
+      &quot;focalPoint&quot;: { &quot;@container&quot;: &quot;@list&quot;, &quot;@id&quot;: &quot;toot:focalPoint&quot; }
+    }
+  ],
+  &quot;id&quot;: &quot;https://mastodon.social/users/oddevan&quot;,
+  &quot;type&quot;: &quot;Person&quot;,
+  &quot;following&quot;: &quot;https://mastodon.social/users/oddevan/following&quot;,
+  &quot;followers&quot;: &quot;https://mastodon.social/users/oddevan/followers&quot;,
+  &quot;inbox&quot;: &quot;https://mastodon.social/users/oddevan/inbox&quot;,
+  &quot;outbox&quot;: &quot;https://mastodon.social/users/oddevan/outbox&quot;,
+  &quot;featured&quot;: &quot;https://mastodon.social/users/oddevan/collections/featured&quot;,
+  &quot;featuredTags&quot;: &quot;https://mastodon.social/users/oddevan/collections/tags&quot;,
+  &quot;preferredUsername&quot;: &quot;oddevan&quot;,
+  &quot;name&quot;: &quot;Evan Hildreth&quot;,
+  &quot;summary&quot;: &quot;\u003cp\u003eHow long should it take somebody\u2028 / Before he can be someone?\u003c/p\u003e&quot;,
+  &quot;url&quot;: &quot;https://mastodon.social/@oddevan&quot;,
+  &quot;manuallyApprovesFollowers&quot;: false,
+  &quot;discoverable&quot;: true,
+  &quot;published&quot;: &quot;2017-11-13T00:00:00Z&quot;,
+  &quot;devices&quot;: &quot;https://mastodon.social/users/oddevan/collections/devices&quot;,
+  &quot;publicKey&quot;: {
+    &quot;id&quot;: &quot;https://mastodon.social/users/oddevan#main-key&quot;,
+    &quot;owner&quot;: &quot;https://mastodon.social/users/oddevan&quot;,
+    &quot;publicKeyPem&quot;: &quot;-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoDim3Qywy7PQv6YmBxfO\nDCJAasbmCowLQznpaLubJbWCHePer05HMeFYTarPML8lJ+gYoMg9trUzFHBdKbga\nOODwMQyFhN1gjuOnVmF9e92lZhtq+L+6D9Uyg2yzzkqgbfKP0tLchUx/nAC0PA3T\nMTM2pvz3HQH7KTZ37QHTCzEfJcbSRP4YfXUxQiGuDGADGjgRQXzOfYh76uDYpGrn\nGnrjhZvE0S9i1c/7co+1U0GUjeF3o707TfjoGHCeocHtNrOPvNorCrWHjwQJbLaz\nmSDnVvGTsQ/W2jM8i6bMgkdH9UYuCVR8gmIJfpFP70aDbH3NrdLLJpi2AMCggsCx\nhQIDAQAB\n-----END PUBLIC KEY-----\n&quot;
+  },
+  &quot;tag&quot;: [],
+  &quot;attachment&quot;: [
+    { &quot;type&quot;: &quot;PropertyValue&quot;, &quot;name&quot;: &quot;Pronouns&quot;, &quot;value&quot;: &quot;He/him/his&quot; },
+    {
+      &quot;type&quot;: &quot;PropertyValue&quot;,
+      &quot;name&quot;: &quot;Cross-posted from&quot;,
+      &quot;value&quot;: &quot;\u003cspan class=\&quot;h-card\&quot; translate=\&quot;no\&quot;\u003e\u003ca href=\&quot;https://micro.blog/activitypub/oddevan\&quot; class=\&quot;u-url mention\&quot;\u003e@\u003cspan\u003eoddevan@micro.blog\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e&quot;
+    },
+    {
+      &quot;type&quot;: &quot;PropertyValue&quot;,
+      &quot;name&quot;: &quot;Website&quot;,
+      &quot;value&quot;: &quot;\u003ca href=\&quot;https://eph.me/\&quot; target=\&quot;_blank\&quot; rel=\&quot;nofollow noopener noreferrer me\&quot; translate=\&quot;no\&quot;\u003e\u003cspan class=\&quot;invisible\&quot;\u003ehttps://\u003c/span\u003e\u003cspan class=\&quot;\&quot;\u003eeph.me/\u003c/span\u003e\u003cspan class=\&quot;invisible\&quot;\u003e\u003c/span\u003e\u003c/a\u003e&quot;
+    }
+  ],
+  &quot;endpoints&quot;: { &quot;sharedInbox&quot;: &quot;https://mastodon.social/inbox&quot; },
+  &quot;icon&quot;: {
+    &quot;type&quot;: &quot;Image&quot;,
+    &quot;mediaType&quot;: &quot;image/png&quot;,
+    &quot;url&quot;: &quot;https://files.mastodon.social/accounts/avatars/000/238/202/original/b067f50fd338a482.png&quot;
+  },
+  &quot;image&quot;: {
+    &quot;type&quot;: &quot;Image&quot;,
+    &quot;mediaType&quot;: &quot;image/jpeg&quot;,
+    &quot;url&quot;: &quot;https://files.mastodon.social/accounts/headers/000/238/202/original/e93ad6bcc8ef808a.jpg&quot;
+  }
+}
+
+</code></pre>
+<h4 id="microblog"><a href="../../implementations/microblog/">Micro.blog</a><a class="headerlink" href="#microblog" title="Permanent link">#</a></h4>
+<pre><code class="language-json">{
+  &quot;@context&quot;: [
+    &quot;https://www.w3.org/ns/activitystreams&quot;,
+    &quot;https://w3id.org/security/v1&quot;
+  ],
+  &quot;id&quot;: &quot;https://micro.blog/activitypub/oddevan&quot;,
+  &quot;type&quot;: &quot;Person&quot;,
+  &quot;preferredUsername&quot;: &quot;oddevan&quot;,
+  &quot;name&quot;: &quot;Evan Hildreth&quot;,
+  &quot;summary&quot;: &quot;Once upon a time, there were two Evans. Even Evan lived across the hall. He was a very proportional man, had good posture, and always kept the salt with the pepper.\n\nI’m odd.&quot;,
+  &quot;inbox&quot;: &quot;https://micro.blog/activitypub/oddevan/inbox&quot;,
+  &quot;outbox&quot;: &quot;https://micro.blog/activitypub/oddevan/outbox&quot;,
+  &quot;followers&quot;: &quot;https://micro.blog/activitypub/oddevan/followers&quot;,
+  &quot;following&quot;: &quot;https://micro.blog/activitypub/oddevan/following&quot;,
+  &quot;endpoints&quot;: { &quot;sharedInbox&quot;: &quot;https://micro.blog/activitypub/shared/inbox&quot; },
+  &quot;publicKey&quot;: {
+    &quot;id&quot;: &quot;https://micro.blog/activitypub/oddevan#key&quot;,
+    &quot;owner&quot;: &quot;https://micro.blog/activitypub/oddevan&quot;,
+    &quot;publicKeyPem&quot;: &quot;-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo65nMxZaBtDIsl/KtRBR\nWiS/5gIutLil0TlIezKzikVkOe7+8EI3vkQAqKtBULNtJFBlKaqWbSyshLt+sFvU\nLNcugYGWNEFfUdTKC6MSqJCbjE09xRjrOVd6sSYbDwDbJpBhpZpIg1VscHOB3ngi\nO7QHmyf8kbyvy3N1h0lW+6vdqEnmkoJmGDHnhC6ip+Z96G+CXJWIIjT/Bf+dhU20\nmzHE+3+uICr5IQje/rro4pwvedd7FTWHculyvki3uY3iDQswYZA8w0ij13A1khV3\nrjlETVHHDm7J4MtyHyt6mGa9Z1N9zLz9WK7wkRJbLWCKzzQxsPTvEVl+/nCjKHAI\n4QIDAQAB\n-----END PUBLIC KEY-----\n&quot;
+  },
+  &quot;icon&quot;: {
+    &quot;url&quot;: &quot;https://micro.blog/oddevan/avatar.jpg&quot;,
+    &quot;type&quot;: &quot;Image&quot;,
+    &quot;mediaType&quot;: &quot;image/jpeg&quot;
+  },
+  &quot;attachment&quot;: [
+    {
+      &quot;type&quot;: &quot;PropertyValue&quot;,
+      &quot;name&quot;: &quot;Blog&quot;,
+      &quot;value&quot;: &quot;\u003ca href=\&quot;https://oddevan.com/\&quot;\u003eoddevan.com\u003c/a\u003e&quot;
+    }
+  ]
+}
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="About ActivityPub"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../delete/" class="btn btn-neutral float-right" title="Delete">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../delete/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
