@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# The Social API Database
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+A place to learn about and document the new ways for social media sites to communicate. Whether ActivityPub, Webmention,
+or something entirely different, we aim to show in plain terms what developers can expect both in terms of spec
+compliance and what a popular project will _actually_ send.
 
-## Commands
+Any and all help is appreciated, and you can get involved via [the site GitHub project][gh].
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+All content here is in the public domain to the fullest extend possible and is marked with <a href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"></a>.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+[gh]: https://github.com/smolblog/social-api-db

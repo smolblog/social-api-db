@@ -1,3 +1,7 @@
 site_name: Social API Database
 site_url: https://socialapi.smolblog.org/
 theme: readthedocs
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      baselevel: 2

@@ -1,13 +1,13 @@
 ---
-title: Micropub - Syndication Config
+title: Syndication Config
 ---
 
+# Syndication Config
+
 This provides the syndication channels available to the given user. It is often included in the
-[config](/micropub/cconfig) endpoint as well.
+[config](config.md) endpoint as well.
 
-## Example
-
-### Request
+## Request
 
 ```
 GET /micropub?q=syndicate-to HTTP/1.1
@@ -15,7 +15,7 @@ Authorization: Bearer 1234567890asdfghjkl
 Host: micro.blog
 ```
 
-### Response
+## Response
 
 ```json
 {

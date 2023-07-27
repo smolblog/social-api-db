@@ -1,5 +1,5 @@
 ---
-title: Micropub
+title: About Micropub
 ---
 
 # Micropub
@@ -7,9 +7,9 @@ title: Micropub
 Used by services and self-hosted blogs alike. Designed to be usable as both a JSON API and as the target of an HTML
 form.
 
-Usually secured with [IndieAuth](/indieauth/). Sometimes paired with [Microsub](/microsub/).
+Usually secured with [IndieAuth](../indieauth/index.md). Sometimes paired with [Microsub](../microsub/index.md).
 
 ## Get
 
-- [Config](config)
-- [Syndication config](syndicate-to)
+- [Config](config.md)
+- [Syndication config](syndicate-to.md)
